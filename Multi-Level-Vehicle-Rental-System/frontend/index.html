@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RENTX - Multi-Level Vehicle Rental System. Rent cars, bikes, and trucks easily.">
+    <title>RENTX – Multi-Level Vehicle Rental System</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="navbar-brand">
+        <div class="brand-logo">RX</div>
+        <div>
+            <span class="brand-name">RENTX</span>
+            <span class="brand-subtitle">Multi-Level Vehicle Rental</span>
+        </div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">🏠 Dashboard</a></li>
+        <li><a href="vehicles.html">🚗 Vehicles</a></li>
+        <li><a href="customers.html">👥 Customers</a></li>
+        <li><a href="rental.html">🔑 Rent</a></li>
+        <li><a href="return.html">↩️ Return</a></li>
+        <li><a href="history.html">📋 History</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Drive Your World with <span>RENTX</span></h1>
+    <p>A complete multi-level vehicle rental platform. Rent cars, bikes, and trucks. Built with Java Spring Boot + OOP concepts.</p>
+    <div class="hero-actions">
+        <a href="vehicles.html" class="btn btn-primary btn-lg">🚗 Browse Vehicles</a>
+        <a href="rental.html" class="btn btn-outline btn-lg">🔑 Rent a Vehicle</a>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- DASHBOARD STATS -->
+    <div class="stats-grid fade-in" id="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">🚘</div>
+            <div class="stat-info">
+                <h3 id="stat-total-vehicles">—</h3>
+                <p>Total Vehicles</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-info">
+                <h3 id="stat-available">—</h3>
+                <p>Available</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🔑</div>
+            <div class="stat-info">
+                <h3 id="stat-rented">—</h3>
+                <p>Rented Out</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+                <h3 id="stat-customers">—</h3>
+                <p>Customers</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📋</div>
+            <div class="stat-info">
+                <h3 id="stat-active-rentals">—</h3>
+                <p>Active Rentals</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK LINKS + RECENT ACTIVITY -->
+    <div class="two-col">
+        <!-- Quick Actions -->
+        <div class="card fade-in">
+            <div class="card-header">
+                <h2>⚡ Quick Actions</h2>
+            </div>
+            <div class="card-body" style="display:flex; flex-direction:column; gap:0.75rem;">
+                <a href="vehicles.html" class="btn btn-outline" style="width:100%; justify-content:start;">
+                    🚗 &nbsp; View & Manage Vehicles
+                </a>
+                <a href="customers.html" class="btn btn-outline" style="width:100%; justify-content:start;">
+                    👥 &nbsp; View & Add Customers
+                </a>
+                <a href="rental.html" class="btn btn-primary" style="width:100%; justify-content:start;">
+                    🔑 &nbsp; Rent a Vehicle
+                </a>
+                <a href="return.html" class="btn btn-success" style="width:100%; justify-content:start;">
+                    ↩️ &nbsp; Return a Vehicle
+                </a>
+                <a href="history.html" class="btn btn-outline" style="width:100%; justify-content:start;">
+                    📋 &nbsp; View Rental History
+                </a>
+            </div>
+        </div>
+
+        <!-- Recent Rentals -->
+        <div class="card fade-in">
+            <div class="card-header">
+                <h2>🕐 Recent Rentals</h2>
+                <a href="history.html" class="btn btn-outline btn-sm">View All</a>
+            </div>
+            <div id="recent-rentals-list">
+                <div class="loading-overlay">
+                    <div class="spinner"></div> Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OOP Info Banner -->
+    <div class="card fade-in" style="margin-top:1.5rem; background: linear-gradient(135deg, rgba(108,99,255,0.08), rgba(78,205,196,0.05));">
+        <div class="card-body" style="display:flex; flex-wrap:wrap; gap:2rem; align-items:center;">
+            <div style="flex:1; min-width:200px;">
+                <h3 style="font-size:1rem; margin-bottom:0.5rem; color:var(--primary-light);">🎓 OOP Concepts Demonstrated</h3>
+                <p style="font-size:0.85rem; color:var(--text-secondary);">This project showcases core Java OOP principles</p>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+                <span class="chip">Abstraction</span>
+                <span class="chip">Inheritance</span>
+                <span class="chip">Polymorphism</span>
+                <span class="chip">Encapsulation</span>
+                <span class="chip">Method Overriding</span>
+                <span class="chip">Custom Exceptions</span>
+                <span class="chip">ArrayList</span>
+                <span class="chip">HashMap</span>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+<script>
+    // Load dashboard statistics
+    async function loadDashboard() {
+        try {
+            // Load stats
+            const stats = await apiFetch('/vehicles/stats');
+            document.getElementById('stat-total-vehicles').textContent = stats.totalVehicles ?? 0;
+            document.getElementById('stat-available').textContent = stats.availableVehicles ?? 0;
+            document.getElementById('stat-rented').textContent = stats.rentedVehicles ?? 0;
+            document.getElementById('stat-customers').textContent = stats.totalCustomers ?? 0;
+            document.getElementById('stat-active-rentals').textContent = stats.activeRentals ?? 0;
+
+            // Load recent rentals
+            const rentals = await apiFetch('/rentals');
+            const container = document.getElementById('recent-rentals-list');
+
+            if (!rentals || rentals.length === 0) {
+                container.innerHTML = `<div class="empty-state"><div class="icon">📋</div><p>No rentals yet. <a href="rental.html" style="color:var(--primary-light)">Rent a vehicle</a> to get started.</p></div>`;
+                return;
+            }
+
+            // Show last 5 rentals
+            const recent = rentals.slice(-5).reverse();
+            container.innerHTML = `
+                <div style="padding:0.5rem 0;">
+                    ${recent.map(r => `
+                        <div style="display:flex; align-items:center; justify-content:space-between; padding:0.875rem 1.5rem; border-bottom:1px solid var(--border);">
+                            <div>
+                                <div style="font-weight:600; font-size:0.875rem;">${r.rentalId} — ${r.vehicle?.model || '—'}</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">${r.customer?.name || '—'} · ${formatDate(r.rentalDate)}</div>
+                            </div>
+                            <div style="text-align:right;">
+                                ${statusBadge(r.status)}
+                                <div style="font-size:0.78rem; color:var(--success); font-weight:600; margin-top:0.2rem;">${formatCurrency(r.totalAmount)}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+        } catch (err) {
+            document.getElementById('recent-rentals-list').innerHTML =
+                `<div class="empty-state"><div class="icon">⚠️</div><h3>Backend not connected</h3><p>${err.message}</p></div>`;
+            ['stat-total-vehicles','stat-available','stat-rented','stat-customers','stat-active-rentals']
+                .forEach(id => document.getElementById(id).textContent = 'ERR');
+            showToast(err.message, 'error');
+        }
+    }
+
+    loadDashboard();
+</script>
+</body>
+</html>

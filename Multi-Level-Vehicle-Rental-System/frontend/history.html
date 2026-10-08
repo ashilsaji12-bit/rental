@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View complete rental history in RENTX.">
+    <title>Rental History – RENTX</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-brand">
+        <div class="brand-logo">RX</div>
+        <div>
+            <span class="brand-name">RENTX</span>
+            <span class="brand-subtitle">Multi-Level Vehicle Rental</span>
+        </div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">🏠 Dashboard</a></li>
+        <li><a href="vehicles.html">🚗 Vehicles</a></li>
+        <li><a href="customers.html">👥 Customers</a></li>
+        <li><a href="rental.html">🔑 Rent</a></li>
+        <li><a href="return.html">↩️ Return</a></li>
+        <li><a href="history.html" class="active">📋 History</a></li>
+    </ul>
+</nav>
+
+<div class="page-header">
+    <h1>📋 Rental History</h1>
+    <p>View all rental transactions, past and active.</p>
+</div>
+
+<main class="main-content">
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+        <div class="search-input">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="history-search" placeholder="Search by rental ID, customer, or vehicle..." oninput="filterHistory()">
+        </div>
+        <select class="filter-select" id="status-filter" onchange="filterHistory()">
+            <option value="">All Status</option>
+            <option value="ACTIVE">⏳ Active</option>
+            <option value="RETURNED">✓ Returned</option>
+        </select>
+        <select class="filter-select" id="type-filter-h" onchange="filterHistory()">
+            <option value="">All Types</option>
+            <option value="Car">🚗 Car</option>
+            <option value="Bike">🏍️ Bike</option>
+            <option value="Truck">🚛 Truck</option>
+        </select>
+    </div>
+
+    <p id="history-count" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;"></p>
+
+    <!-- History Table -->
+    <div class="card fade-in">
+        <div id="history-table-wrapper">
+            <div class="loading-overlay"><div class="spinner"></div> Loading rental history...</div>
+        </div>
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

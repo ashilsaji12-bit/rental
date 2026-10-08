@@ -1,0 +1,17 @@
+com\vehiclerental\exception\VehicleNotAvailableException.class
+com\vehiclerental\console\ConsoleApplication.class
+com\vehiclerental\controller\VehicleController.class
+com\vehiclerental\VehicleRentalApplication.class
+com\vehiclerental\model\Truck.class
+com\vehiclerental\model\Vehicle.class
+com\vehiclerental\model\Rental.class
+com\vehiclerental\controller\RentalController.class
+com\vehiclerental\model\Car.class
+com\vehiclerental\CorsConfig.class
+com\vehiclerental\model\Rental$RentalStatus.class
+com\vehiclerental\model\Customer.class
+com\vehiclerental\model\Bike.class
+com\vehiclerental\exception\GlobalExceptionHandler.class
+com\vehiclerental\service\VehicleRentalService.class
+com\vehiclerental\CorsConfig$1.class
+com\vehiclerental\controller\CustomerController.class
